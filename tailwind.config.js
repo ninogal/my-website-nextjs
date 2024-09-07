@@ -8,8 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'primary': '#FCD37A',
+        'secondary': '#181818',
+      },
+      container: {
+        screens: {
+          'sm': '100%',
+          'md': '720px',
+          'lg': '960px',
+        },
+      },
+      fontFamily: {
+        sans: ['Ubuntu', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
     },
   },

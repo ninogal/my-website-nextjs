@@ -1,101 +1,57 @@
-import Image from "next/image";
+import Image from "next/image"
+import profilePic from "./media/profile.jpg"
+import {FaHtml5, FaLaravel, FaCss3Alt, FaJs, FaReact, FaWordpress, FaPhp, FaSass, FaBootstrap, FaNpm, FaGit, FaUbuntu } from 'react-icons/fa';
+import ConnectButtons from "@/app/connectButtons";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    return (
+        <>
+            <div className="container my-16 mx-auto px-4 text-white">
+                <div className="flex flex-col md:flex-row items-center gap-4">
+                    <div className="p-4 text-center md:text-left md:w-1/2 order-2 md:order-1">
+                        <h1 className="text-6xl font-bold mb-8">Hey, I'm <span className="text-primary">Nino</span></h1>
+                        <p className="text-lg mb-8">
+                            I am a passionate <span className="font-bold">software developer</span> with experience in
+                            creating innovative and custom software
+                            solutions.
+                            Specializing in <span className="font-bold">web development</span>, I am dedicated to
+                            turning ideas
+                            into digital reality through
+                            clean and scalable code.
+                        </p>
+                        <ConnectButtons/>
+                    </div>
+                    <div className="p-4 flex items-center justify-center md:w-1/2 order-1 md:order-2">
+                        <Image
+                            src={profilePic} // Percorso dell'immagine nella cartella `public`
+                            alt="Descrizione dell'immagine"
+                            width={300}
+                            height={300}
+                            style={{borderRadius: '50%'}}
+                        />
+                    </div>
+                </div>
+                <div className="flex flex-wrap mt-16 md:mt-32 justify-center">
+                    <FaHtml5 className="w-12 h-12 m-4"/>
+                    <FaCss3Alt className="w-12 h-12 m-4"/>
+                    <FaJs className="w-12 h-12 m-4"/>
+                    <FaPhp className="w-12 h-12 m-4"/>
+                    <FaReact className="w-12 h-12 m-4"/>
+                    <FaLaravel className="w-12 h-12 m-4"/>
+                    <FaWordpress className="w-12 h-12 m-4"/>
+                    <FaSass className="w-12 h-12 m-4"/>
+                    <FaNpm className="w-12 h-12 m-4"/>
+                    <FaGit className="w-12 h-12 m-4"/>
+                    <FaUbuntu className="w-12 h-12 m-4"/>
+                </div>
+                <footer className="text-white py-4 mt-32">
+                    <div className="container mx-auto text-center">
+                        <p className="text-sm">
+                            &copy; {new Date().getFullYear()} Nino. All rights reserved.
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </>
+    );
 }
