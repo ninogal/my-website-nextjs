@@ -1,6 +1,6 @@
 import Image from "next/image"
 import profilePic from "./media/profile.jpg"
-import {FaHtml5, FaLaravel, FaCss3Alt, FaJs, FaReact, FaWordpress, FaPhp, FaSass, FaBootstrap, FaNpm, FaGit, FaUbuntu } from 'react-icons/fa';
+import {FaHtml5, FaLaravel, FaCss3Alt, FaJs, FaReact, FaWordpress, FaPhp, FaSass, FaNpm, FaGit, FaUbuntu } from 'react-icons/fa';
 import ConnectButtons from "@/app/connectButtons";
 
 export default function Home() {
@@ -47,7 +47,7 @@ export default function Home() {
                 <footer className="text-white py-4 mt-32">
                     <div className="container mx-auto text-center">
                         <p className="text-sm">
-                            &copy; {new Date().getFullYear()} Nino. All rights reserved.
+                            &copy; {new Date().getFullYear()} Antonino Galati. All rights reserved.
                         </p>
                     </div>
                 </footer>
